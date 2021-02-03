@@ -1,0 +1,3 @@
+interrupt()只是将线程状态标记为isinterrupted=true，具体对这个标记如何处理需要业务
+自行决定，但大多数是终止并清理资源；如长期wait,长期等待io，长期sleep等，在catch中
+throw异常即可

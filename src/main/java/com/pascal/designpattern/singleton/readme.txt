@@ -1,0 +1,1 @@
+https://www.ibm.com/developerworks/cn/java/j-lo-Singleton/index.html#icomments

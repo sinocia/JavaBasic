@@ -1,0 +1,3 @@
+sleep()属于Thread类，wait()属于Object类；都会释放cpu资源，都会造成线程阻塞；但sleep不会释放对象锁，
+wait释放锁进去等待队列；
+状态：new runnable running blocked dead

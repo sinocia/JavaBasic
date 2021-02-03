@@ -1,0 +1,29 @@
+和interface区别及使用场景
+Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain
+a mix of methods declared with or without an implementation. However, with abstract classes,
+ you can declare fields that are not static and final, and define public, protected, and private
+  concrete methods. With interfaces, all fields are automatically public, static, and final,
+  and all methods that you declare or define (as default methods) are public. In addition,
+  you can extend only one class, whether or not it is abstract, whereas you can implement
+  any number of interfaces.
+1、抽象类字段可以非final 非static,接口只能是常量。
+2、抽象类方法可以是public protected private default 具体方法，接口只能public
+2、接口：can contain only constants, method signatures, default methods, static methods, and nested types.
+
+Which should you use, abstract classes or interfaces?
+
+Consider using abstract classes if any of these statements apply to your situation:
+1、You want to share code among several closely related classes.
+    在密切关联的类中分享代码（字段、方法）
+2、You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+    期望继承抽象的子类们拥有一些相同的字段及方法，或者期望一些字段及方法的访问控制是protected private等
+3、You want to declare non-static or non-final fields. This enables you to define methods that can access and modify the state of the object to which they belong.
+    需要申明非static非final的字段，这样可以定义可以修改这些字段的方法
+
+Consider using interfaces if any of these statements apply to your situation:
+1、You expect that unrelated classes would implement your interface. For example, the interfaces Comparable and Cloneable are implemented by many unrelated classes.
+    不相干的类实现接口。
+2、You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.
+    只关心数据的行为，不关心具体谁来实现
+3、You want to take advantage of multiple inheritance of type.
+    利用接口的多继承性：interface不是类，可以继承多个
